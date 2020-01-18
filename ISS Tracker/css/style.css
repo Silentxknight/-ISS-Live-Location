@@ -1,0 +1,54 @@
+/* !code by Silent_Coder AKA SilentxKnight */
+*{
+    font-family: 'Space Mono', monospace;
+    line-height: 1.9em;
+}
+::selection{
+    background-color: #000;
+    color: yellow;
+}
+h1{
+  overflow: visible;
+  border: solid 3px #000;
+  user-select: none;
+}
+.hr{
+    height: 3px;
+    background-color: #000;
+}
+.btn{
+    background-color: #000;
+    color: yellow;
+}
+.btn:hover{
+    background-color: #000;
+    color: yellow;
+}
+.btn:focus{
+    background-color: yellow;
+    color: #000;
+}
+.infoTag{
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+#logoAnimate{
+    animation-name:logoSpin ;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    user-select: none;
+    border-radius: 10%;
+}
+@keyframes logoSpin {
+
+    /* 0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;} */
+    0%{transform: rotate(0deg);
+        background-color:yellow}
+    100%{transform: rotate(360deg);
+        background-color: rgb(255, 0, 0);}
+}
