@@ -3,6 +3,7 @@ $(function () {
 let getBtn=$("#getBtn");
 let issUrl="http://api.open-notify.org/iss-now.json?";
 let outPut=$('#outPut');
+let test=$('#tesT')
 
 getBtn.click(loadLocation);
 function loadLocation () {
@@ -11,10 +12,10 @@ function loadLocation () {
  
          $.each(data['iss_position'], function (indexInArray,value) { 
             console.log( indexInArray+" : "+value);
-           var loadedData="<ul>"+"<li>"+"</li>"+indexInArray+" : "+value+"<li>"+"</li>"+indexInArray+" : "+value+"</ul>";
-           
+           var loadedData="<ul>"+"<li>"+indexInArray+" : "+value+"</li>"+"</ul>"           
             
-           outPut.html(loadedData)
+            outPut.append(loadedData);
+            // $("<h4/>").html(loadedData).appendTo(outPut);
           
             
          });
